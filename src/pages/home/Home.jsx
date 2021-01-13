@@ -16,11 +16,11 @@ export default class Home extends Component {
 
   fetchArticles = async () => {
     try {
-      let response = await fetch("http://localhost:3077/articles/");
+      let response = await fetch("http://localhost:3077/articles");
       if (response.ok) {
         let articles = await response.json();
         this.setState({ articles });
-        // console.log(articles[0]);
+        console.log(articles[0]);
       } else {
         alert("There is an error.");
       }
